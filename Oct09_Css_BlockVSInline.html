@@ -1,0 +1,53 @@
+블록레벨요소 vs 인라인레벨요소
+
+블록레벨요소: 자기가 속한 영역의 너비를 모두 차지하여 블록을 형성
+(ex: div, p, h1 등)
+
+인라인레벨요소: 자기에게 필요한 만큼의 공간만 차지
+(ex: span, a 등)
+
+display속성
+요소를 블록과 인라인 요소 중 어느쪽으로 처리할지 결정
+div{display: inline;}
+a{display: block;}
+
+border속성
+요소가 차지하는 영역에 테두리를 그릴 수 있다.
+span{border: 2px solid green;}  ->단축속성
+->span태그에 두께가 2px인 직선모양(solid)의 초록테두리를 만든다
+
+따로따로 지정도 가능
+border-color : color 방식과 동일
+border-width: thin, medium, thick 등의 키워드 또는 px, em, rem
+border-style:none,solid(직선),dotted(점선),dashed(긴 점선)
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{border: 3px solid red;
+        display: inline;
+    }
+    
+    span{ 
+        border-width: 5px;
+        border-style:dotted;
+        border-color:rgb(100%,50%,0%);
+        display:block;
+    }
+
+</style>
+
+
+
+</head>
+<body>
+    <div>나는야 블록 레벨</div>
+    <span>나는야 인라인</span>
+</body>
+</html>
