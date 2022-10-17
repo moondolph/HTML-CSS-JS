@@ -1,0 +1,64 @@
+position 속성값
+static : 기본값
+relative : 일반적인 문서 흐름에 따라 배치하되, 상하좌우 위치 값에 따라 오프셋적용
+absolute : 일반적인 문서 흐름에서 제거, 가장 가까운 position 지정 요소에 대해 상대적으로 오프셋적용
+fixed : 일반적인 문서흐름에서 제거, 지정한 위치에 고정
+sticky : 일반적인 문서흐름에서 제거, 스크롤 동작이 존재하는 가장 가까운 요소에 대해 오프셋 적용
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+div{
+    width: 100px; height: 100px;
+    background-color: red;
+    position:relative;      
+    top:100px; left:100px;  /*top에서 100px, left에서 100px떨어뜨려라*/
+}
+.container{
+    display:flex;
+    flex-direction: column;
+
+} 
+
+.item{
+    width:80px; height: 80px; background-color: orange;
+}
+</style>
+</head>
+<body>
+    <div></div>
+
+<div class="container">
+    <div class="item">하나</div>
+    <div class="item">둘</div>
+    <div class="item">셋</div>
+</div>
+
+flex-direction 
+row:기본값. 주축은 행이고 방향은 콘텐츠의 방향과 동일
+row-reverse: 주축은 행이고 방향은 콘텐츠의 방향과 반대
+column: 주축은 열이고 방향은 콘텐츠의 방향과 동일
+column-reverse: 주축은 열이고 방향은 콘텐츠의 방향과 반대
+
+내용정리<hr>
+flexbox란 박스 내 요소 간의 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델이다
+행 또는 열이 주축이 되어 요소의 정렬 방향을 결정한다
+flex-direction 속성은 요소를 배치할 때 사용할 주축 및 방향을 지정한다
+
+
+flexbox 다루기 <hr>
+주축배치방법 : justify-content
+교차축배치방법 : align-items
+교차축개별요소배치방법 : align-self
+개별요소가 컨테이너보다 커졌을 때 줄 바꿈 여부 : flex-wrap
+
+
+
+
+</body>
+</html>

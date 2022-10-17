@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>선택자의 종류</h1>
+기본선택자
+그룹선택자
+특성선택자
+결합선택자
+의사클래스
+의사요소
+
+특성선택자 기본 양식
+*클래스 속성을 가지고 있는 요소 선택하기
+[class]{
+    background-color:tomato;
+}
+
+*클래스가 item인 요소 선택하기 
+[class="item"]{
+    background-color:tomato;
+}
+
+
+[class *= "it"]{color: white;}     => 클래스 값에 "it"가 포함되는 요소를 선택하기
+[class ^= "it"]{color: white;}     => 클래스 값이 "it"로 시작하는 요소를 선택하기
+[class $= "it"]{color: white;}     => 클래스 값이 "it"로 끝나는 요소를 선택하기
+
+
+결합선택자 
+div p{ color:white; }   => div안의 모든 p요소 선택
+div > p{ color:white; } => div요소 바로 아래의 모든 p요소 선택  = div안에 p요소인거 선택
+h1 ~ p{color:red;}  => h1요소 뒤의 오는 형제 중 모든 p요소 선택  *형제:동일선상의 태그
+h1 + p{color:red;}  => h1요소 바로 뒤에 오는 형제 p요소 선택
+
+</body>
+</html>
