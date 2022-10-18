@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* hover active focus disabled nth-child */
+input{
+    width:100px; height:30px;
+    background-color: red; color: white;
+    border: none; border-radius: 8px;
+    float:left;
+
+}
+[type="button"]:hover{      /*마우스 포인터 올려놓았을때*/
+    background-color: gray;
+}
+[type="button"]:active{     /*요소 활성화 했을 떄(마우스 포인터 눌렀을때)*/
+    background-color: black;
+}
+[type="text"]:focus{     /*요소가 포커스 받고 있을 때(커서 잡혀있을 때)*/
+    background-color: black;
+    color:azure;
+}
+input:disabled{
+    height:50px;
+}
+
+body{
+    display:flex;
+    justify-content:space-between;
+}
+
+.box{
+    width: 50px; height:50px;
+    background-color: blue; color:white;
+    clear:both;
+}
+
+.box:nth-child(2n+1){
+    background-color: red;
+}
+</style>
+
+
+</head>
+
+<body>
+    <!-- <input type="button" value="버튼">
+    <input type="text" placeholder="아무거나쓰셈">
+    <input type="text" placeholder="disabled" disabled> /*input사용못하게 함*/ -->
+    
+    <div class="box">1번</div>
+    <div class="box">2번</div>
+    <div class="box">3번</div>
+    <div class="box">4번</div>
+    <div class="box">5번</div>
+
+</body>
+</html>
